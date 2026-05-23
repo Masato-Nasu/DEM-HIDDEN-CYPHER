@@ -12,9 +12,6 @@ Each generated pattern contains both:
 
 ## Screenshot
 
-`screenshot1.png` is included from the previous Turing Cypher build.  
-Replace it later with a DEM HIDDEN CYPHER screenshot.
-
 <p align="center">
   <img src="./screenshot1.png" alt="DEM HIDDEN CYPHER screenshot" width="720">
 </p>
