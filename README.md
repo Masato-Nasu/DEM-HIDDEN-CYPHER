@@ -13,7 +13,7 @@ Each generated pattern contains both:
 ## Screenshot
 
 <p align="center">
-  <img src="./screenshot1.png" alt="DEM HIDDEN CYPHER screenshot" width="720">
+![DEM HIDDEN CYPHER screenshot](screenshot-dem-hidden-cypher-20260523.png)
 </p>
 
 ## Concept
