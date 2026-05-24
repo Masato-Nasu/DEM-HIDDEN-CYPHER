@@ -16,6 +16,10 @@ Each generated pattern contains both:
   <img src="screenshot-dem-hidden-cypher-20260523.png" alt="DEM HIDDEN CYPHER screenshot" width="420">
 </p>
 
+<p align="center">
+  <img src="screenshot2.png" alt="DEM HIDDEN CYPHER generated organic pattern" width="420">
+</p>
+
 ## Concept
 
 DEM HIDDEN CYPHER is not a QR code and not an NFT clone.
