@@ -302,12 +302,12 @@
     const need = plainLen + 8 + 50;
     if (selected !== 'auto') { const size = Number(selected); const cap = capacityBytesForSize(size); return { size, pages: Math.max(1, Math.ceil(need / cap)), cap }; }
     const autoSizes = [1024, 1536, 2048, 3072, 4096, 6144, 7168, 8192, 9216, 10240, 12288];
-    // Prefer the smallest size that fits within 2 pages.
+    // Auto first tries to make a single organic PNG.
     for (const size of autoSizes) {
-      const cap = capacityBytesForSize(size); const pages = Math.max(1, Math.ceil(need / cap));
-      if (pages <= 2) return { size, pages, cap };
+      const cap = capacityBytesForSize(size);
+      if (need <= cap) return { size, pages: 1, cap };
     }
-    // Otherwise minimize page count by using the largest supported page.
+    // If one page is not possible, use the largest supported page to minimize page count.
     const size = 12288, cap = capacityBytesForSize(size);
     return { size, pages: Math.max(1, Math.ceil(need / cap)), cap };
   }
@@ -399,8 +399,8 @@
 
   function imageTargetBytesForOnePage(noteText) {
     const selected = $('pageSize') ? $('pageSize').value : 'auto';
-    const size = selected === 'auto' ? 8192 : Number(selected);
-    const cap = capacityBytesForSize(size || 8192);
+    const size = selected === 'auto' ? 12288 : Number(selected);
+    const cap = capacityBytesForSize(size || 12288);
     const noteBytes = enc.encode(noteText || '').length;
     return Math.max(900, cap - noteBytes - 760);
   }
